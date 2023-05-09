@@ -1,6 +1,6 @@
 from fastapi import Request
 
-from redis_staorage.connector import RedisConnector
+from redis_storage.connector import RedisConnector
 
 
 async def get_redis_connector(request: Request) -> RedisConnector:

@@ -5,7 +5,7 @@ from typing import Optional, Any
 from config import SETTINGS
 from app.schemas import Build
 from app.errors import OperationError
-from redis_staorage.connector import RedisConnector
+from redis_storage.connector import RedisConnector
 
 
 def get_path():

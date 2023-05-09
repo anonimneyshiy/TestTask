@@ -2,7 +2,7 @@ from app.schemas import Build, GetTasksResponse
 
 from app.utils import get_order_tasks
 from app.errors import OperationError
-from redis_staorage.connector import RedisConnector
+from redis_storage.connector import RedisConnector
 from config import SETTINGS
 
 

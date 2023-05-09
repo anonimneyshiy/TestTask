@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from config import SETTINGS
 from app.handlers import tasks_router
-from redis_staorage.connector import RedisConnector
+from redis_storage.connector import RedisConnector
 
 from app.utils import load_builds, load_tasks
 
