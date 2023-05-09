@@ -6,7 +6,7 @@ import redis
 
 
 class RedisConnector:
-    """ Connector for interactions with redis_staorage """
+    """ Connector for interactions with redis_storage """
 
     _db_instance: Union[redis.Redis, None] = None
 
