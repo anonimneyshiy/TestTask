@@ -1,0 +1,4 @@
+builds:
+- name: first_build
+  tasks:
+  - a

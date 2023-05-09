@@ -1,0 +1,30 @@
+tasks:
+- name: a
+  dependencies:
+  - b
+  - c
+  - d
+- name: b
+  dependencies: []
+- name: c
+  dependencies:
+  - e
+  - f
+- name: d
+  dependencies:
+  - j
+- name: e
+  dependencies: []
+- name: f
+  dependencies:
+  - l
+- name: j
+  dependencies:
+  - h
+  - k
+- name: l
+  dependencies: []
+- name: h
+  dependencies: []
+- name: k
+  dependencies: []

@@ -1,0 +1,32 @@
+version: "3.9"
+
+networks:
+  simple_network:
+    name: simple_network
+    driver: bridge
+
+services:
+  simple_application:
+    build: .
+    container_name: simple_application
+    image: simple_application
+    env_file:
+      - .env.example
+    command: bash -c "uvicorn main:app --reload --host 0.0.0.0"
+    ports:
+      - "${WEBAPI_EXPOSED_PORT:-8000}:8000"
+    networks:
+      - simple_network
+
+  simple_redis:
+    image: redis:7.0
+    restart: always
+    healthcheck:
+      test: redis-cli ping || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '6379:6379'
+    networks:
+      - simple_network
