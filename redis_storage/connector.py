@@ -5,6 +5,7 @@ import json
 import redis
 
 
+# TODO changes async methods RedisConnector (through redis.asyncio)
 class RedisConnector:
     """ Connector for interactions with redis_storage """
 
@@ -27,7 +28,6 @@ class RedisConnector:
         key: str,
         value: Union[dict[str, list[str]], list[str]],
     ) -> None:
-        print(key, value)
         json_value = json.dumps(value)
         self._db_instance.set(key, json_value)
 
